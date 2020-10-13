@@ -1,0 +1,26 @@
+.main {
+    display: grid;
+    grid-template-areas:
+        "sidebar toolbar"
+        "sidebar mapView";
+
+    // 100px (toolbar) + 50px (header)
+    grid-template-rows: 100px calc(100vh - 150px);
+    grid-template-columns: 300px calc(100vw - 300px);
+}
+
+.sidebar {
+    border: solid;
+    grid-area: sidebar;
+}
+
+.toolbar {
+    border: solid;
+
+    grid-area: toolbar;
+}
+
+.mapView {
+    border: solid;
+    grid-area: mapView;
+}
