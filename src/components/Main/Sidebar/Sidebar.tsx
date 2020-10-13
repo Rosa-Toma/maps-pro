@@ -8,40 +8,41 @@ import { SidebarTool } from "./SidebarTool/SidebarTool";
 
 import styles from "./Sidebar.module.scss";
 
-import KeyboardArrowLeftOutlinedIcon from "@material-ui/icons/KeyboardArrowLeftOutlined";
-import EditAttributesOutlinedIcon from "@material-ui/icons/EditAttributesOutlined";
-import ZoomOutMapOutlinedIcon from "@material-ui/icons/ZoomOutMapOutlined";
-import DeleteOutlineOutlinedIcon from "@material-ui/icons/DeleteOutlineOutlined";
-import DynamicFeedOutlinedIcon from "@material-ui/icons/DynamicFeedOutlined";
-import FileCopyOutlinedIcon from "@material-ui/icons/FileCopyOutlined";
-import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
-import CropFreeOutlinedIcon from "@material-ui/icons/CropFreeOutlined";
-import PrintOutlinedIcon from "@material-ui/icons/PrintOutlined";
-import PhotoCameraOutlinedIcon from "@material-ui/icons/PhotoCameraOutlined";
+import {
+    EditAttributesOutlined,
+    ZoomOutMapOutlined,
+    DeleteOutlineOutlined,
+    DynamicFeedOutlined,
+    FileCopyOutlined,
+    SettingsOutlined,
+    CropFreeOutlined,
+    PrintOutlined,
+    PhotoCameraOutlined,
+} from "@material-ui/icons";
 
 export const Sidebar = () => {
     return (
         <div className={styles.sidebar}>
             <SidebarTabSection>
-                <SidebarTab />
-                <SidebarTab />
-                <SidebarTab />
+                <SidebarTab title={"tab"} />
+                <SidebarTab title={"tab"} />
+                <SidebarTab title={"tab"} />
             </SidebarTabSection>
 
             <SidebarSection title={"Objets"}>
-                <SidebarTool title={"modifier"} icon={<EditAttributesOutlinedIcon />} />
-                <SidebarTool title={"translater"} icon={<ZoomOutMapOutlinedIcon />} />
-                <SidebarTool title={"supprimer"} icon={<DeleteOutlineOutlinedIcon />} />
-                <SidebarTool title={"référence"} icon={<DynamicFeedOutlinedIcon />} />
-                <SidebarTool title={"copier"} icon={<FileCopyOutlinedIcon />} />
-                <SidebarTool title={"coller"} icon={<FileCopyOutlinedIcon />} />
+                <SidebarTool title={"modifier"} icon={<EditAttributesOutlined />} />
+                <SidebarTool title={"translater"} icon={<ZoomOutMapOutlined />} />
+                <SidebarTool title={"supprimer"} icon={<DeleteOutlineOutlined />} />
+                <SidebarTool title={"référence"} icon={<DynamicFeedOutlined />} />
+                <SidebarTool title={"copier"} icon={<FileCopyOutlined />} />
+                <SidebarTool title={"coller"} icon={<FileCopyOutlined />} />
             </SidebarSection>
 
             <SidebarSection title={"impression"}>
-                <SidebarTool title={"paramètres"} icon={<SettingsOutlinedIcon />} />
-                <SidebarTool title={"emprise"} icon={<CropFreeOutlinedIcon />} />
-                <SidebarTool title={"imprimer"} icon={<PrintOutlinedIcon />} />
-                <SidebarTool title={"capture"} icon={<PhotoCameraOutlinedIcon />} />
+                <SidebarTool title={"paramètres"} icon={<SettingsOutlined />} />
+                <SidebarTool title={"emprise"} icon={<CropFreeOutlined />} />
+                <SidebarTool title={"imprimer"} icon={<PrintOutlined />} />
+                <SidebarTool title={"capture"} icon={<PhotoCameraOutlined />} />
             </SidebarSection>
         </div>
     );

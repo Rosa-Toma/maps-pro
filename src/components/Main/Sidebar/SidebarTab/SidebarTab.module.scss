@@ -1,2 +1,39 @@
 .sidebarTab {
+    cursor: pointer;
+
+    border: none;
+    border-radius: 5px;
+
+    box-shadow: 1px 1px 1px;
+
+    background-color: var(--bg-dark-secondary);
+
+    width: 70px;
+    height: 30px;
+
+    padding: 5px;
+    outline: none;
+
+    background-position: center;
+    transition: background 0.5s;
+
+    .sidebarTab__title {
+        color: var(--text-light-secondary);
+
+        font-size: 0.8em;
+
+        letter-spacing: 1px;
+
+        text-align: center;
+
+        text-transform: capitalize;
+    }
+}
+
+.sidebarTab:hover {
+    background: var(--bg-dark-third);
+}
+
+.sidebarTab:focus {
+    background: var(--bg-dark-third);
 }
