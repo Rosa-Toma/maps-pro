@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./Toolbar.module.scss";
 
 import { ToolbarSection } from "./ToolbarSection/ToolbarSection";
-import { ToolbarTool } from "./ToolbarTool";
+import { ToolbarTool } from "./ToolbarTool/ToolbarTool";
 
 // Icones
 import {

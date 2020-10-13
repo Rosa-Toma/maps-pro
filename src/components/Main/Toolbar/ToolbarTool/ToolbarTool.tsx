@@ -3,7 +3,7 @@ import React, { useState, useContext } from "react";
 import styles from "./ToolbarTool.module.scss";
 
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import MapContext from "../../../context/MapContext";
+import MapContext from "../../../../context/MapContext";
 
 export const ToolbarTool = ({
     children,
