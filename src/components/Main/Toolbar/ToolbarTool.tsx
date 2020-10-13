@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import styles from "./ToolbarTool.module.scss";
 
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import MapContext from "../../../context/MapContext";
 
 export const ToolbarTool = ({
     children,
@@ -15,8 +16,8 @@ export const ToolbarTool = ({
     swapIconInactive,
     swapIconDessin,
     swapIconVue,
-    mapOpenLayers,
 }: any) => {
+    const map = useContext(MapContext);
 
     const zoomIn = (map: any) => {
         const view = map.getView();
@@ -35,7 +36,7 @@ export const ToolbarTool = ({
             view.setZoom(zoom - 1);
         }
     };
-    
+
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
@@ -69,12 +70,12 @@ export const ToolbarTool = ({
 
             case "navigation__zoomer":
                 console.log(toolId);
-                zoomIn(mapOpenLayers);
+                zoomIn(map);
                 break;
 
             case "navigation__dezoomer":
                 console.log(toolId);
-                zoomOut(mapOpenLayers);
+                zoomOut(map);
                 break;
 
             case "outils__mesure":

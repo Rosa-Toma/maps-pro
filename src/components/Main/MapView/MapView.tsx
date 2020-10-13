@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import MapContext from "../../../context/MapContext";
 
 import styles from "./MapView.module.scss";
 
-export const MapView = ({ mapOpenLayers }: any) => {
+export const MapView = () => {
+    const map = useContext(MapContext);
     useEffect(() => {
-        mapOpenLayers.setTarget("map");
-    }, [mapOpenLayers]);
+        map.setTarget("map");
+    }, [map]);
 
     return <div id="map" className={styles.mapView}></div>;
 };

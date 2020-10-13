@@ -5,58 +5,46 @@ import styles from "./Toolbar.module.scss";
 import { ToolbarSection } from "./ToolbarSection/ToolbarSection";
 import { ToolbarTool } from "./ToolbarTool";
 
-// STANDARD
-import NearMeOutlinedIcon from "@material-ui/icons/NearMeOutlined";
-import FiberManualRecordOutlinedIcon from "@material-ui/icons/FiberManualRecordOutlined";
-import Crop32OutlinedIcon from "@material-ui/icons/Crop32Outlined";
-import BorderColorOutlinedIcon from "@material-ui/icons/BorderColorOutlined";
-import UndoOutlinedIcon from "@material-ui/icons/UndoOutlined";
-import RedoOutlinedIcon from "@material-ui/icons/RedoOutlined";
+// Icones
+import {
+    NearMeOutlined,
+    FiberManualRecordOutlined,
+    Crop32Outlined,
+    BorderColorOutlined,
+    UndoOutlined,
+    RedoOutlined,
+    PanToolOutlined,
+    ZoomInOutlined,
+    ZoomOutOutlined,
+    CenterFocusWeakOutlined,
+    SquareFootOutlined,
+    SettingsOverscanOutlined,
+    DataUsageOutlined,
+    OpenWithOutlined,
+    EditAttributesOutlined,
+    NotInterestedOutlined,
+    TouchAppOutlined,
+    LinearScaleOutlined,
+    TrendingFlatOutlined,
+    TimelineOutlined,
+    ChangeHistoryOutlined,
+    MultilineChartOutlined,
+    GridOnOutlined,
+    ViewColumnOutlined,
+    CheckOutlined,
+    StreetviewOutlined,
+    MapOutlined,
+    EditLocationOutlined,
+    WbSunnyOutlined,
+    // Brightness2Outlined,
+} from "@material-ui/icons";
 
-// NAVIGATION
-import PanToolOutlinedIcon from "@material-ui/icons/PanToolOutlined";
-import ZoomInOutlinedIcon from "@material-ui/icons/ZoomInOutlined";
-import ZoomOutOutlinedIcon from "@material-ui/icons/ZoomOutOutlined";
-import CenterFocusWeakOutlinedIcon from "@material-ui/icons/CenterFocusWeakOutlined";
-
-// OUTILS
-import SquareFootOutlinedIcon from "@material-ui/icons/SquareFootOutlined";
-import SettingsOverscanOutlinedIcon from "@material-ui/icons/SettingsOverscanOutlined";
-import DataUsageOutlinedIcon from "@material-ui/icons/DataUsageOutlined";
-import OpenWithOutlinedIcon from "@material-ui/icons/OpenWithOutlined";
-import EditAttributesOutlinedIcon from "@material-ui/icons/EditAttributesOutlined";
-
-// ACCROCHE
-import NotInterestedOutlinedIcon from "@material-ui/icons/NotInterestedOutlined";
-import TouchAppOutlinedIcon from "@material-ui/icons/TouchAppOutlined";
-import LinearScaleOutlinedIcon from "@material-ui/icons/LinearScaleOutlined";
-import TrendingFlatOutlinedIcon from "@material-ui/icons/TrendingFlatOutlined";
-
-// DESSIN
-import TimelineOutlinedIcon from "@material-ui/icons/TimelineOutlined";
-import ChangeHistoryOutlinedIcon from "@material-ui/icons/ChangeHistoryOutlined";
-import MultilineChartOutlinedIcon from "@material-ui/icons/MultilineChartOutlined";
-import GridOnOutlinedIcon from "@material-ui/icons/GridOnOutlined";
-import ViewColumnOutlinedIcon from "@material-ui/icons/ViewColumnOutlined";
-
-// AFFICHAGE
-import CheckOutlinedIcon from "@material-ui/icons/CheckOutlined";
-import StreetviewOutlinedIcon from "@material-ui/icons/StreetviewOutlined";
-import MapOutlinedIcon from "@material-ui/icons/MapOutlined";
-import EditLocationOutlinedIcon from "@material-ui/icons/EditLocationOutlined";
-import WbSunnyOutlinedIcon from "@material-ui/icons/WbSunnyOutlined";
-// import Brightness2OutlinedIcon from "@material-ui/icons/Brightness2Outlined";
-
-export const Toolbar = ({ mapOpenLayers }: any) => {
-    const [iconSelection, setIconSelection] = useState(<NearMeOutlinedIcon />);
-    const [iconMesure, setIconMesure] = useState(<SquareFootOutlinedIcon />);
-    const [iconInactive, setIconInactive] = useState(
-        <NotInterestedOutlinedIcon />
-    );
-    const [iconDessin, setIconDessin] = useState(
-        <FiberManualRecordOutlinedIcon />
-    );
-    const [iconVue, setIconVue] = useState(<StreetviewOutlinedIcon />);
+export const Toolbar = () => {
+    const [iconSelection, setIconSelection] = useState(<NearMeOutlined />);
+    const [iconMesure, setIconMesure] = useState(<SquareFootOutlined />);
+    const [iconInactive, setIconInactive] = useState(<NotInterestedOutlined />);
+    const [iconDessin, setIconDessin] = useState(<FiberManualRecordOutlined />);
+    const [iconVue, setIconVue] = useState(<StreetviewOutlined />);
 
     const swapIconSelection = (newIcon: any) => {
         setIconSelection(newIcon);
@@ -85,50 +73,43 @@ export const Toolbar = ({ mapOpenLayers }: any) => {
                     icon={iconSelection}
                     swapIconSelection={swapIconSelection}
                     toolId={"standard__selection"}
-                    mapOpenLayers={mapOpenLayers}
                 >
                     <ToolbarTool
                         title={"point et rectangle"}
-                        icon={<NearMeOutlinedIcon />}
+                        icon={<NearMeOutlined />}
                         swapIconSelection={swapIconSelection}
                         toolId={"standard__pointEtRectangle"}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"cercle"}
-                        icon={<FiberManualRecordOutlinedIcon />}
+                        icon={<FiberManualRecordOutlined />}
                         swapIconSelection={swapIconSelection}
                         toolId={"standard__cercle"}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"polygonale"}
-                        icon={<Crop32OutlinedIcon />}
+                        icon={<Crop32Outlined />}
                         swapIconSelection={swapIconSelection}
                         toolId={"standard__polygonale"}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"libre"}
-                        icon={<BorderColorOutlinedIcon />}
+                        icon={<BorderColorOutlined />}
                         swapIconSelection={swapIconSelection}
                         toolId={"standard__libre"}
-                        mapOpenLayers={mapOpenLayers}
                     />
                 </ToolbarTool>
 
                 <ToolbarTool
                     title={"annuler"}
-                    icon={<UndoOutlinedIcon />}
+                    icon={<UndoOutlined />}
                     toolId={"standard__annuler"}
-                    mapOpenLayers={mapOpenLayers}
                 />
 
                 <ToolbarTool
                     title={"refaire"}
-                    icon={<RedoOutlinedIcon />}
+                    icon={<RedoOutlined />}
                     toolId={"standard__refaire"}
-                    mapOpenLayers={mapOpenLayers}
                 />
             </ToolbarSection>
 
@@ -137,27 +118,23 @@ export const Toolbar = ({ mapOpenLayers }: any) => {
             <ToolbarSection title={"navigation"}>
                 <ToolbarTool
                     title={"panoter"}
-                    icon={<PanToolOutlinedIcon />}
+                    icon={<PanToolOutlined />}
                     toolId={"navigation__panoter"}
-                    mapOpenLayers={mapOpenLayers}
                 />
                 <ToolbarTool
                     title={"zoomer"}
-                    icon={<ZoomInOutlinedIcon />}
+                    icon={<ZoomInOutlined />}
                     toolId={"navigation__zoomer"}
-                    mapOpenLayers={mapOpenLayers}
                 />
                 <ToolbarTool
                     title={"dézoomer"}
-                    icon={<ZoomOutOutlinedIcon />}
+                    icon={<ZoomOutOutlined />}
                     toolId={"navigation__dezoomer"}
-                    mapOpenLayers={mapOpenLayers}
                 />
                 <ToolbarTool
                     title={"recentrer"}
-                    icon={<CenterFocusWeakOutlinedIcon />}
+                    icon={<CenterFocusWeakOutlined />}
                     toolId={"navigation__recentrer"}
-                    mapOpenLayers={mapOpenLayers}
                 />
             </ToolbarSection>
 
@@ -170,42 +147,36 @@ export const Toolbar = ({ mapOpenLayers }: any) => {
                     icon={iconMesure}
                     toolId={"outils__mesure"}
                     swapIconMesure={swapIconMesure}
-                    mapOpenLayers={mapOpenLayers}
                 >
                     <ToolbarTool
                         title={"distance"}
-                        icon={<SquareFootOutlinedIcon />}
+                        icon={<SquareFootOutlined />}
                         toolId={"outils__distance"}
                         swapIconMesure={swapIconMesure}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"surface"}
-                        icon={<SettingsOverscanOutlinedIcon />}
+                        icon={<SettingsOverscanOutlined />}
                         toolId={"outils__surface"}
                         swapIconMesure={swapIconMesure}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"buffer"}
-                        icon={<DataUsageOutlinedIcon />}
+                        icon={<DataUsageOutlined />}
                         toolId={"outils__buffer"}
                         swapIconMesure={swapIconMesure}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"translater"}
-                        icon={<OpenWithOutlinedIcon />}
+                        icon={<OpenWithOutlined />}
                         toolId={"outils__translater"}
                         swapIconMesure={swapIconMesure}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"modifier"}
-                        icon={<EditAttributesOutlinedIcon />}
+                        icon={<EditAttributesOutlined />}
                         toolId={"outils__modifier"}
                         swapIconMesure={swapIconMesure}
-                        mapOpenLayers={mapOpenLayers}
                     />
                 </ToolbarTool>
             </ToolbarSection>
@@ -219,35 +190,30 @@ export const Toolbar = ({ mapOpenLayers }: any) => {
                     icon={iconInactive}
                     toolId={"accroche__inactive"}
                     swapIconInactive={swapIconInactive}
-                    mapOpenLayers={mapOpenLayers}
                 >
                     <ToolbarTool
                         title={"inactive"}
-                        icon={<NotInterestedOutlinedIcon />}
+                        icon={<NotInterestedOutlined />}
                         toolId={"accroche__inactive"}
                         swapIconInactive={swapIconInactive}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"point"}
-                        icon={<TouchAppOutlinedIcon />}
+                        icon={<TouchAppOutlined />}
                         toolId={"accroche__point"}
                         swapIconInactive={swapIconInactive}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"segment"}
-                        icon={<LinearScaleOutlinedIcon />}
+                        icon={<LinearScaleOutlined />}
                         toolId={"accroche__segment"}
                         swapIconInactive={swapIconInactive}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"polyligne"}
-                        icon={<TrendingFlatOutlinedIcon />}
+                        icon={<TrendingFlatOutlined />}
                         toolId={"accroche__polyligne"}
                         swapIconInactive={swapIconInactive}
-                        mapOpenLayers={mapOpenLayers}
                     />
                 </ToolbarTool>
             </ToolbarSection>
@@ -261,48 +227,41 @@ export const Toolbar = ({ mapOpenLayers }: any) => {
                     icon={iconDessin}
                     toolId={"dessin__dessin"}
                     swapIconDessin={swapIconDessin}
-                    mapOpenLayers={mapOpenLayers}
                 >
                     <ToolbarTool
                         title={"cercle"}
-                        icon={<FiberManualRecordOutlinedIcon />}
+                        icon={<FiberManualRecordOutlined />}
                         toolId={"dessin__cercle"}
                         swapIconDessin={swapIconDessin}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"polyligne"}
-                        icon={<TimelineOutlinedIcon />}
+                        icon={<TimelineOutlined />}
                         toolId={"dessin__polyligne"}
                         swapIconDessin={swapIconDessin}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"polygone"}
-                        icon={<ChangeHistoryOutlinedIcon />}
+                        icon={<ChangeHistoryOutlined />}
                         toolId={"dessin__polygone"}
                         swapIconDessin={swapIconDessin}
-                        mapOpenLayers={mapOpenLayers}
                     />
                 </ToolbarTool>
                 <ToolbarTool
                     dropdown
                     title={"guide"}
-                    icon={<GridOnOutlinedIcon />}
+                    icon={<GridOnOutlined />}
                     toolId={"dessin__guide"}
-                    mapOpenLayers={mapOpenLayers}
                 >
                     <ToolbarTool
                         title={"tangente"}
-                        icon={<MultilineChartOutlinedIcon />}
+                        icon={<MultilineChartOutlined />}
                         toolId={"dessin__tangente"}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"normale"}
-                        icon={<ViewColumnOutlinedIcon />}
+                        icon={<ViewColumnOutlined />}
                         toolId={"dessin__normale"}
-                        mapOpenLayers={mapOpenLayers}
                     />
                 </ToolbarTool>
             </ToolbarSection>
@@ -312,9 +271,8 @@ export const Toolbar = ({ mapOpenLayers }: any) => {
             <ToolbarSection title={"affichage"}>
                 <ToolbarTool
                     title={"état"}
-                    icon={<CheckOutlinedIcon />}
+                    icon={<CheckOutlined />}
                     toolId={"affichage__etat"}
-                    mapOpenLayers={mapOpenLayers}
                 />
                 <ToolbarTool
                     dropdown
@@ -322,35 +280,30 @@ export const Toolbar = ({ mapOpenLayers }: any) => {
                     icon={iconVue}
                     toolId={"affichage__vue"}
                     swapIconVue={swapIconVue}
-                    mapOpenLayers={mapOpenLayers}
                 >
                     <ToolbarTool
                         title={"street view"}
-                        icon={<StreetviewOutlinedIcon />}
+                        icon={<StreetviewOutlined />}
                         toolId={"affichage__streetView"}
                         swapIconVue={swapIconVue}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"bing maps"}
-                        icon={<MapOutlinedIcon />}
+                        icon={<MapOutlined />}
                         toolId={"affichage__bingMaps"}
                         swapIconVue={swapIconVue}
-                        mapOpenLayers={mapOpenLayers}
                     />
                     <ToolbarTool
                         title={"fond geoserver"}
-                        icon={<EditLocationOutlinedIcon />}
+                        icon={<EditLocationOutlined />}
                         toolId={"affichage__fondGeoserver"}
                         swapIconVue={swapIconVue}
-                        mapOpenLayers={mapOpenLayers}
                     />
                 </ToolbarTool>
                 <ToolbarTool
                     title={"thème"}
-                    icon={<WbSunnyOutlinedIcon />}
+                    icon={<WbSunnyOutlined />}
                     toolId={"affichage__theme"}
-                    mapOpenLayers={mapOpenLayers}
                 />
             </ToolbarSection>
         </div>
