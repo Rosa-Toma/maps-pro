@@ -1,0 +1,18 @@
+.toolbarSection > h1 {
+    color: var(--text-light-primary);
+
+    text-align: center;
+
+    font-size: 1.2em;
+
+    letter-spacing: 1px;
+
+    text-transform: capitalize;
+}
+
+.toolbarSection__tools {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}

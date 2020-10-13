@@ -19,7 +19,7 @@ export const Header = () => {
 };
 
 export const Logo = ({ imgSrc }: any) => {
-    return <img className={styles.logo} src={imgSrc}></img>;
+    return <img className={styles.logo} src={imgSrc} alt={"logo"}></img>;
 };
 
 export const TabSection = ({ children }: any) => {
