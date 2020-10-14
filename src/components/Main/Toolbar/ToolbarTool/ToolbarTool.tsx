@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import useToolHandler from "../../../../hooks/useToolHandler";
+import useHotKeys from "../../../../hooks/useHotKeys";
 
 import styles from "./ToolbarTool.module.scss";
 
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import { GlobalHotKeys } from "react-hotkeys";
 
 export const ToolbarTool = ({
     children,
@@ -28,8 +30,10 @@ export const ToolbarTool = ({
         swapIconVue
     );
 
+    const { keyMap, handlers } = useHotKeys();
     return (
         <div className={styles.toolbarTool} id={toolId}>
+            <GlobalHotKeys keyMap={keyMap} handlers={handlers} />
             <button onClick={handleClick}>
                 <div className={styles.tool__icon}>
                     {icon} {dropdown && <KeyboardArrowDownIcon />}

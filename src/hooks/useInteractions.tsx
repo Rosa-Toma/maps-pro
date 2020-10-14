@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import MapContext from "../context/MapContext";
+
 const useInteractions = () => {
-    const zoomIn = (map: any) => {
+    const map = useContext(MapContext);
+
+    const zoomIn = () => {
         const view = map.getView();
         const zoom = view.getZoom();
 
@@ -8,7 +13,7 @@ const useInteractions = () => {
         }
     };
 
-    const zoomOut = (map: any) => {
+    const zoomOut = () => {
         const view = map.getView();
         const zoom = view.getZoom();
 

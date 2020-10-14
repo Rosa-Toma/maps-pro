@@ -17,6 +17,7 @@
     "ol": "^6.4.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hotkeys": "^2.0.0-pre9",
     "react-scripts": "3.4.3",
     "typescript": "^3.7.5"
   },

@@ -42,7 +42,6 @@ import {
 } from "@material-ui/icons";
 
 export const Toolbar = () => {
-
     const {
         iconDessin,
         iconSelection,

@@ -1,8 +1,6 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 
 import useInteractions from "../hooks/useInteractions";
-
-import MapContext from "../context/MapContext";
 
 export const useToolHandler = (
     toolId: any,
@@ -13,8 +11,6 @@ export const useToolHandler = (
     swapIconDessin?: any,
     swapIconVue?: any
 ) => {
-    const map = useContext(MapContext);
-
     const { zoomIn, zoomOut } = useInteractions();
 
     const [isOpen, setIsOpen] = useState(false);
@@ -50,12 +46,12 @@ export const useToolHandler = (
 
             case "navigation__zoomer":
                 console.log(toolId);
-                zoomIn(map);
+                zoomIn();
                 break;
 
             case "navigation__dezoomer":
                 console.log(toolId);
-                zoomOut(map);
+                zoomOut();
                 break;
 
             case "outils__mesure":

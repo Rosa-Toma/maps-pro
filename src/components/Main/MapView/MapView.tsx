@@ -5,6 +5,7 @@ import styles from "./MapView.module.scss";
 
 export const MapView = () => {
     const map = useContext(MapContext);
+
     useEffect(() => {
         map.setTarget("map");
     }, [map]);
