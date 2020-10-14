@@ -1,20 +1,14 @@
-import React, { useContext } from "react";
+import React /*, { useContext }*/ from "react";
+
+import useToolHandler from "../../../../hooks/useToolHandler";
 
 import styles from "./SidebarTool.module.scss";
 
-import MapContext from "../../../../context/MapContext";
+export const SidebarTool = ({ title, icon, toolId }: any) => {
+    const { handleClick } = useToolHandler(toolId);
 
-export const SidebarTool = ({ children, title, icon, toolId }: any) => {
-    const map = useContext(MapContext);
-
-    const handleClick = () => {
-        switch (toolId) {
-            default:
-                break;
-        }
-    };
     return (
-        <div className={styles.sidebarTool}>
+        <div className={styles.sidebarTool} id={toolId}>
             <button onClick={handleClick}>
                 <div className={styles.sidebarTool__icon}>{icon}</div>
                 <h2 className={styles.sidebarTool__title}>{title}</h2>

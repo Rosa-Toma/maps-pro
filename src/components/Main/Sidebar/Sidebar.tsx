@@ -30,19 +30,19 @@ export const Sidebar = () => {
             </SidebarTabSection>
 
             <SidebarSection title={"Objets"}>
-                <SidebarTool title={"modifier"} icon={<EditAttributesOutlined />} />
-                <SidebarTool title={"translater"} icon={<ZoomOutMapOutlined />} />
-                <SidebarTool title={"supprimer"} icon={<DeleteOutlineOutlined />} />
-                <SidebarTool title={"référence"} icon={<DynamicFeedOutlined />} />
-                <SidebarTool title={"copier"} icon={<FileCopyOutlined />} />
-                <SidebarTool title={"coller"} icon={<FileCopyOutlined />} />
+                <SidebarTool title={"modifier"} icon={<EditAttributesOutlined />} toolId={"objets__modifier"} />
+                <SidebarTool title={"translater"} icon={<ZoomOutMapOutlined />} toolId={"objets__translater"} />
+                <SidebarTool title={"supprimer"} icon={<DeleteOutlineOutlined />} toolId={"objets__supprimer"} />
+                <SidebarTool title={"référence"} icon={<DynamicFeedOutlined />} toolId={"objets__reference"} />
+                <SidebarTool title={"copier"} icon={<FileCopyOutlined />} toolId={"objets__copier"} />
+                <SidebarTool title={"coller"} icon={<FileCopyOutlined />} toolId={"objets__coller"} />
             </SidebarSection>
 
             <SidebarSection title={"impression"}>
-                <SidebarTool title={"paramètres"} icon={<SettingsOutlined />} />
-                <SidebarTool title={"emprise"} icon={<CropFreeOutlined />} />
-                <SidebarTool title={"imprimer"} icon={<PrintOutlined />} />
-                <SidebarTool title={"capture"} icon={<PhotoCameraOutlined />} />
+                <SidebarTool title={"paramètres"} icon={<SettingsOutlined />} toolId={"impression__parametres"} />
+                <SidebarTool title={"emprise"} icon={<CropFreeOutlined />} toolId={"impression__emprise"} />
+                <SidebarTool title={"imprimer"} icon={<PrintOutlined />} toolId={"impression__imprimer"} />
+                <SidebarTool title={"capture"} icon={<PhotoCameraOutlined />} toolId={"impression__capture"} />
             </SidebarSection>
         </div>
     );
