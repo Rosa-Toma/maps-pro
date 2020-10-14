@@ -4,7 +4,7 @@ import useInteractions from "../hooks/useInteractions";
 
 import MapContext from "../context/MapContext";
 
-export const useTool = (
+export const useToolHandler = (
     toolId: any,
     icon?: any,
     swapIconSelection?: any,
@@ -196,4 +196,4 @@ export const useTool = (
     return { handleClick: handleClick, isOpen: isOpen };
 };
 
-export default useTool;
+export default useToolHandler;

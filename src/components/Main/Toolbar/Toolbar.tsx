@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+
+import useSwapIcon from "../../../hooks/useSwapIcon";
 
 import styles from "./Toolbar.module.scss";
 
@@ -40,29 +42,19 @@ import {
 } from "@material-ui/icons";
 
 export const Toolbar = () => {
-    const [iconSelection, setIconSelection] = useState(<NearMeOutlined />);
-    const [iconMesure, setIconMesure] = useState(<SquareFootOutlined />);
-    const [iconInactive, setIconInactive] = useState(<NotInterestedOutlined />);
-    const [iconDessin, setIconDessin] = useState(<FiberManualRecordOutlined />);
-    const [iconVue, setIconVue] = useState(<StreetviewOutlined />);
 
-    const swapIconSelection = (newIcon: any) => {
-        setIconSelection(newIcon);
-    };
-
-    const swapIconMesure = (newIcon: any) => {
-        setIconMesure(newIcon);
-    };
-    const swapIconInactive = (newIcon: any) => {
-        setIconInactive(newIcon);
-    };
-    const swapIconDessin = (newIcon: any) => {
-        setIconDessin(newIcon);
-    };
-
-    const swapIconVue = (newIcon: any) => {
-        setIconVue(newIcon);
-    };
+    const {
+        iconDessin,
+        iconSelection,
+        iconInactive,
+        iconMesure,
+        iconVue,
+        swapIconSelection,
+        swapIconMesure,
+        swapIconInactive,
+        swapIconDessin,
+        swapIconVue,
+    } = useSwapIcon();
 
     return (
         <div className={styles.toolbar}>
