@@ -1,6 +1,6 @@
 import React from "react";
 
-import useSwapIcon from "../../../hooks/useSwapIcon";
+import useSwapIcon from "./useSwapIcon";
 
 import styles from "./Toolbar.module.scss";
 

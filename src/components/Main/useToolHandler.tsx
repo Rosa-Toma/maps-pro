@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import useInteractions from "../hooks/useInteractions";
+import useInteractions from "./Toolbar/ToolbarTool/useInteractions";
 
 export const useToolHandler = (
     toolId: any,
@@ -15,12 +15,13 @@ export const useToolHandler = (
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const handleClick = () => {
+    const handleClick = (e: any) => {
         setIsOpen(!isOpen);
 
         switch (toolId) {
             case "standard__selection":
                 console.log(toolId);
+                console.log(e.target);
                 swapIconSelection(icon);
                 break;
 

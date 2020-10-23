@@ -1,6 +1,6 @@
 import React /*, { useContext }*/ from "react";
 
-import useToolHandler from "../../../../hooks/useToolHandler";
+import useToolHandler from "../../useToolHandler";
 
 import styles from "./SidebarTool.module.scss";
 

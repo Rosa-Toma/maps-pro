@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import useToolHandler from "../../../../hooks/useToolHandler";
-import useHotKeys from "../../../../hooks/useHotKeys";
+import useToolHandler from "../../useToolHandler";
+import useHotKeys from "./useHotKeys";
 
 import styles from "./ToolbarTool.module.scss";
 

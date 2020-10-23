@@ -15,5 +15,5 @@
         "noEmit": true,
         "jsx": "react"
     },
-    "include": ["src", "src/components", "src/context"]
+    "include": ["src", "src/components", "src/context", "src/hooks"]
 }

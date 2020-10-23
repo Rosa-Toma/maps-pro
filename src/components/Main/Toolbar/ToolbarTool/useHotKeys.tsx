@@ -1,7 +1,3 @@
-import React, { useContext } from "react";
-
-import MapContext from "../context/MapContext";
-
 import useInteractions from "./useInteractions";
 
 const useHotKeys = () => {
@@ -9,10 +5,12 @@ const useHotKeys = () => {
 
     const keyMap = {
         ZOOM: "up",
+        UNZOOM: "down",
     };
 
     const handlers = {
         ZOOM: zoomIn,
+        UNZOOM: zoomOut,
     };
 
     return { keyMap: keyMap, handlers: handlers };
