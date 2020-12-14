@@ -14,6 +14,7 @@ export const useToolHandler = (
     const { zoomIn, zoomOut } = useInteractions();
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isDark, setIsDark] = useState(true)
 
     const handleClick = (e: any) => {
         setIsOpen(!isOpen);
@@ -156,6 +157,43 @@ export const useToolHandler = (
                 console.log(toolId);
                 swapIconVue(icon);
                 break;
+
+            case "affichage__theme":
+                console.log(toolId);
+                let root = document.documentElement;
+                let mapDiv : any = document.querySelector("#map");
+                if (isDark) {
+                    setIsDark(false)
+                    root.style.setProperty("--bg-dark-primary","#E0E0E0")
+                    root.style.setProperty("--bg-dark-secondary","#BDBDBD")
+
+                    root.style.setProperty("--text-light-primary","#121212")
+                    root.style.setProperty("--text-light-secondary","#1f1f1f")
+
+                    root.style.setProperty("--shadow-1", "1px 1px 1px gray")
+                    root.style.setProperty("--shadow-2", "2px 2px 2px gray")
+                    root.style.setProperty("--shadow-5", "5px 5px 5px gray")
+                    root.style.setProperty("--shadow-header", "0px 1px 5px gray")
+
+                    mapDiv.style.setProperty("filter", "invert(0%)")  
+                } else {
+                    setIsDark(true)
+                    root.style.setProperty("--bg-dark-primary","#121212")
+                    root.style.setProperty("--bg-dark-secondary","#1f1f1f")
+
+                    root.style.setProperty("--text-light-primary","#e2e2e2")
+                    root.style.setProperty("--text-light-secondary","#6a6a6a")
+
+                    root.style.setProperty("--shadow-1", "1px 1px 1px black")
+                    root.style.setProperty("--shadow-2", "2px 2px 2px black")
+                    root.style.setProperty("--shadow-5", "5px 5px 5px black")
+                    root.style.setProperty("--shadow-header", "0px 1px 5px black")
+
+                    mapDiv.style.setProperty("filter", "invert(100%)")
+                }
+                console.log(mapDiv)
+                break;
+
             case "objets__modifier":
                 console.log(toolId);
                 break;
